@@ -36,7 +36,7 @@ const MintPopup = ({ onClose }) => {
   return (
     <div className="mint-popup">
       <div className="popup-header">
-        <h1 className="transfer-page-title"style={{ fontFamily: 'Montserrat' }}>Mint NFT</h1>
+        <h1 className="transfer-page-title">MINT NFT</h1>
         <button className="close-button" onClick={onClose}>
           x
         </button>
@@ -120,7 +120,7 @@ const TransferPopup = ({ onClose }) => {
 
   // Function to fetch the list of owned tokens
   const fetchOwnedTokens = () => {
-    // Call your API function to fetch the token list
+    // Call API function to fetch the token list
     getTokenList()
       .then((response) => {
         setOwnedTokens(response.data);
@@ -134,7 +134,7 @@ const TransferPopup = ({ onClose }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform the transfer logic here, e.g., call an API endpoint
+    // Perform the transfer logic 
     // with the destination and token ID values
 
     // Reset the form fields
@@ -145,7 +145,7 @@ const TransferPopup = ({ onClose }) => {
   return (
     <div className="transfer-popup">
       <div className="popup-header">
-        <h1 className="transfer-page-title"style={{ fontFamily: 'Montserrat' }}>Transfer NFT</h1>
+        <h1 className="transfer-page-title">TRANSFER NFT</h1>
         <button className="close-button" onClick={onClose}>
           x
         </button>
@@ -245,7 +245,7 @@ const BurnPopup = ({ onClose }) => {
   return (
     <div className="burn-popup">
             <div className="popup-header">
-        <h1 className="transfer-page-title"style={{ fontFamily: 'Montserrat' }}>Burn NFT</h1>
+        <h1 className="transfer-page-title">BURN NFT</h1>
         <button className="close-button" onClick={onClose}>
           x
         </button>
@@ -304,6 +304,7 @@ const Homepage = () => {
   const [isTransferPopupOpen, setTransferPopupOpen] = useState(false);
   const [isBurnPopupOpen, setIsBurnPopupOpen] = useState(false);
 
+
   const handleMintPopupToggle = () => {
     setIsMintPopupOpen(!isMintPopupOpen);
   };
@@ -341,6 +342,8 @@ const Homepage = () => {
         Menu
       </button> */}
       <div className={`menu-panel ${isMenuOpen ? 'open' : ''}`}>
+        <h2 className="tab-title">Title</h2>
+        <hr className="menu-divider" /> {/* Horizontal line */}
         <button className="menu-link" onClick={handleMintPopupToggle}>
           Mint
         </button>
@@ -352,11 +355,11 @@ const Homepage = () => {
         </button>
         <button className="connect-wallet">CONNECT WALLET</button>
       </div>
-
-      <div className="tab-bar">
-      <h1 className="tab-title" style={{ fontFamily: 'Montserrat' }}>CHAMELLA</h1>
-      </div>
-
+  
+      {/* <div className="tab-bar">
+        <h1 className="tab-title">PROJECT TITLE</h1>
+      </div> */}
+  
       <div className="land-lots-container">
         {landLots.map((landLot) => (
           <div className="land-lot-wrapper" key={landLot.id}>
@@ -374,7 +377,7 @@ const Homepage = () => {
       {isTransferPopupOpen && <TransferPopup onClose={handleTransferPopupToggle} />}
       {isBurnPopupOpen && <BurnPopup onClose={handleBurnPopupToggle} />}
     </div>
-  );
+  );  
 };
 
 
