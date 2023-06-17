@@ -120,7 +120,7 @@ const TransferPopup = ({ onClose }) => {
 
   // Function to fetch the list of owned tokens
   const fetchOwnedTokens = () => {
-    // Call API function to fetch the token list
+    // Call your API function to fetch the token list
     getTokenList()
       .then((response) => {
         setOwnedTokens(response.data);
@@ -134,7 +134,7 @@ const TransferPopup = ({ onClose }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform the transfer logic 
+    // Perform the transfer logic here, e.g., call an API endpoint
     // with the destination and token ID values
 
     // Reset the form fields
@@ -333,8 +333,20 @@ const Homepage = () => {
     { id: 13, image: 'https://e0.pxfuel.com/wallpapers/30/717/desktop-wallpaper-akaza-kimetsu-no-yaiba-edits-animes-artes-thumbnail.jpg' },
     { id: 14, image: 'https://w0.peakpx.com/wallpaper/500/176/HD-wallpaper-genya-shinazugawa-kimetsu-no-yaiba.jpg' },
     { id: 15, image: 'https://e1.pxfuel.com/desktop-wallpaper/838/403/desktop-wallpaper-hotaru-haganezuka-thumbnail.jpg' },
+    { id: 16, image: 'https://e1.pxfuel.com/desktop-wallpaper/838/403/desktop-wallpaper-hotaru-haganezuka-thumbnail.jpg' },
+    { id: 17, image: 'https://e0.pxfuel.com/wallpapers/460/541/desktop-wallpaper-tanjiro-fire-mode.jpg' },
+    { id: 18, image: 'https://wallpapers.com/images/featured/3tg32q5lcq0aaljj.jpg' },
+    { id: 19, image: 'https://wallpapercrafter.com/desktop/138647-Kimetsu-no-Yaiba-anime-Mitsuri-Kanroji-cleavage-multicolored-hair-green-eyes-uniform-twintails-long-hair.jpg' },
+    { id: 20, image: 'https://e1.pxfuel.com/desktop-wallpaper/466/936/desktop-wallpaper-kyojuro-rengoku-by-akhileshy10-rengoku-vs-akaza-thumbnail.jpg' },
+    { id: 21, image: 'https://images2.alphacoders.com/121/1217745.png' },
+    { id: 22, image: 'https://wallpapercrafter.com/desktop/358802-Anime-Demon-Slayer-Kimetsu-no-Yaiba-Phone-Wallpaper.jpg' },
+    { id: 23, image: 'https://cdn.wallpapersafari.com/29/82/zZYmkM.png' },
+    { id: 24, image: 'https://wallpapercave.com/wp/wp4934603.jpg' },
+    { id: 25, image: 'https://rare-gallery.com/uploads/posts/327591-Sanemi-Shinazugawa-Kimetsu-no-Yaiba-4K-iphone-wallpaper.jpg' },
+
   ];
 
+    
   return (
     <div className="homepage"> 
     
@@ -356,9 +368,9 @@ const Homepage = () => {
         <button className="connect-wallet">CONNECT WALLET</button>
       </div>
   
-      {/* <div className="tab-bar">
+      <div className="tab-bar">
         <h1 className="tab-title">PROJECT TITLE</h1>
-      </div> */}
+      </div>
   
       <div className="land-lots-container">
         {landLots.map((landLot) => (
@@ -382,5 +394,3 @@ const Homepage = () => {
 
 
 export default Homepage;
-
-
